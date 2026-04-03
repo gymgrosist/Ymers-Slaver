@@ -5,12 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Medlemmer – YMERS SLAVER</title>
 <style>
+  /* Fullskjerm bakgrunn med blur */
   body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    background: #000000; /* helt svart */
-    color: #ffffff;      /* lys tekst */
+    color: #ffffff;
     text-align: center;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* Blur overlay som dekker hele bakgrunnen */
+  .bg-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("bg.jpg.JPG") no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(12px); /* juster blurstyrken her */
+    z-index: -1; /* ligger bak alt innhold */
+  }
+
+  /* Innhold som ligger over blur */
+  .content {
+    position: relative;
+    z-index: 1;
     padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
   h1 {
@@ -35,20 +59,21 @@
   }
 
   li {
-    background: #0a0a0a; /* mørk boks på svart bakgrunn */
+    background: rgba(0,0,0,0.25); /* lett transparent boks for å se blur gjennom */
     padding: 10px 20px;
     border-radius: 6px;
     min-width: 120px;
     text-align: center;
+    backdrop-filter: blur(4px); /* valgfri ekstra blur bak medlemsbokser */
   }
 
   a.btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 10px 20px; /* mindre og konsekvent med index.html */
+    padding: 10px 20px;
     background: none;
     color: #ffffff;
-    border: 2px solid #ffffff; /* minimalistisk knapp */
+    border: 2px solid #ffffff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 6px;
@@ -60,6 +85,7 @@
     color: #000000;
   }
 
+  /* Responsivt */
   @media (max-width: 600px) {
     h1 { font-size: 2em; }
     h2 { font-size: 1em; }
@@ -70,28 +96,34 @@
 </head>
 <body>
 
-<h1>Medlemmer – YMERS SLAVER</h1>
-<h2>Du er nødt til å være Level 2 på Overall XP i denne serveren</h2>
+<!-- Blur bakgrunn -->
+<div class="bg-blur"></div>
 
-<ul>
-  <li>@alflun</li>
-  <li>@gymgrosist_f1</li>
-  <li>@.how_did_i_get_here</li>
-  <li>@anonym_bruker_27</li>
-  <li>@bobern55._39557</li>
-  <li>@fifaplayer222010</li>
-  <li>@mathan_1</li>
-  <li>@jewfuck69_40628</li>
-  <li>@wuzz.cxnter</li>
-  <li>@._fluc_.</li>
-  <li>@goirillamann_17</li>
-  <li>@lillobas1_10978</li>
-  <li>@matheo121</li>
-  <li>@knivoggaffel</li>
-  <li>@alsahhim.20</li>
-</ul>
+<!-- Innhold over blur -->
+<div class="content">
+  <h1>Medlemmer – YMERS SLAVER</h1>
+  <h2>Du er nødt til å være Level 2 på Overall XP i denne serveren</h2>
 
-<a class="btn" href="index.html">← Tilbake til forsiden</a>
+  <ul>
+    <li>@alflun</li>
+    <li>@gymgrosist_f1</li>
+    <li>@.how_did_i_get_here</li>
+    <li>@anonym_bruker_27</li>
+    <li>@bobern55._39557</li>
+    <li>@fifaplayer222010</li>
+    <li>@mathan_1</li>
+    <li>@jewfuck69_40628</li>
+    <li>@wuzz.cxnter</li>
+    <li>@._fluc_.</li>
+    <li>@goirillamann_17</li>
+    <li>@lillobas1_10978</li>
+    <li>@matheo121</li>
+    <li>@knivoggaffel</li>
+    <li>@alsahhim.20</li>
+  </ul>
+
+  <a class="btn" href="index.html">← Tilbake til forsiden</a>
+</div>
 
 </body>
 </html>
