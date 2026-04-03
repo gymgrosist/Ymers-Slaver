@@ -2,36 +2,39 @@
 <html lang="no">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ymers Slaver</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
+      background: #0a0a0f; /* mørk bakgrunn */
+      color: #e0e0e0; /* lys grå tekst */
       text-align: center;
     }
 
     header {
       padding: 60px 20px;
-      background: linear-gradient(135deg, #5865F2, #7289da);
+      background: linear-gradient(135deg, #3a3f58, #4f5680); /* mørkere gradient */
     }
 
     h1 {
       font-size: 3em;
       margin-bottom: 10px;
+      color: #ffffff;
     }
 
     p {
       font-size: 1.2em;
+      color: #c0c0c0;
     }
 
     .btn {
       display: inline-block;
       margin: 10px;
       padding: 15px 30px;
-      background: #ffffff;
-      color: #5865F2;
+      background: #1f1f2e; /* mørkere knapp */
+      color: #7289da; /* aksentfarge */
       text-decoration: none;
       font-weight: bold;
       border-radius: 8px;
@@ -39,7 +42,9 @@
     }
 
     .btn:hover {
-      background: #ddd;
+      background: #2c2c40;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
 
     section {
@@ -49,6 +54,10 @@
     .box {
       max-width: 600px;
       margin: auto;
+      background: #12121c; /* subtil boks bakgrunn */
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
     }
 
     .button-row {
@@ -60,9 +69,31 @@
 
     footer {
       padding: 20px;
-      background: #020617;
+      background: #05050a;
       font-size: 0.9em;
-      color: #aaa;
+      color: #777;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+      font-size: 1.2em;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+      }
+      .btn {
+        padding: 12px 20px;
+      }
     }
   </style>
 </head>
@@ -77,14 +108,19 @@
 <section>
   <div class="box">
     <h2>Hva som skjer på serveren vår</h2>
-    <p>🎮 Gaming<br>💬 Chatting<br>🎉 Events<br>👥 Nye Folk</p>
+    <ul>
+      <li>🎮 Gaming</li>
+      <li>💬 Chatting</li>
+      <li>🎉 Events</li>
+      <li>👥 Nye Folk</li>
+    </ul>
   </div>
 </section>
 
 <section>
   <div class="box button-row">
     <a class="btn" href="members.html">Medlemmer</a>
-    <a class="btn" href="rules.html">Trykk her for å se regler!</a>
+    <a class="btn" href="rules.html">Se regler</a>
   </div>
 </section>
 
