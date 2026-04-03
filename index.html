@@ -20,23 +20,24 @@
 
     h1 {
       font-size: 3em;
-      margin-bottom: 10px;
+      margin-bottom: 20px; /* litt større mellomrom */
     }
 
     h2 {
       font-size: 2em;
-      margin-bottom: 20px;
+      margin-bottom: 40px; /* mer avstand under overskriften */
     }
 
     p, li, a {
       font-size: 1.2em;
       color: #ffffff;  /* lys tekst */
-      text-decoration: none; /* ingen farge på lenker */
+      text-decoration: none;
     }
 
     ul {
       list-style: none;
       padding: 0;
+      margin-bottom: 40px; /* mer avstand under listen */
     }
 
     li {
@@ -46,17 +47,19 @@
     .button-row {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 15px; /* litt mindre mellom knappene */
       flex-wrap: wrap;
+      margin-top: 20px; /* flytt knappene litt ned */
     }
 
     a.btn {
-      padding: 15px 30px;
+      padding: 10px 20px; /* mindre knapper */
       border: 2px solid #ffffff; /* enkel hvit ramme */
-      border-radius: 8px;
+      border-radius: 6px;
       font-weight: bold;
       transition: 0.2s;
       color: #ffffff;
+      font-size: 1em; /* litt mindre tekst i knappene */
     }
 
     a.btn:hover {
@@ -75,7 +78,7 @@
         font-size: 1em;
       }
       a.btn {
-        padding: 12px 20px;
+        padding: 8px 16px;
       }
     }
   </style>
@@ -96,11 +99,10 @@
     <li>🎉 Events</li>
     <li>👥 Nye Folk</li>
   </ul>
-</section>
-
-<section class="button-row">
-  <a class="btn" href="members.html">Medlemmer</a>
-  <a class="btn" href="rules.html">Se regler</a>
+  <div class="button-row">
+    <a class="btn" href="members.html">Medlemmer</a>
+    <a class="btn" href="rules.html">Se regler</a>
+  </div>
 </section>
 
 <footer>
