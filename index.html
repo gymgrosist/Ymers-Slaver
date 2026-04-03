@@ -6,24 +6,37 @@
   <title>Ymers Slaver</title>
 
   <style>
-    /* Fullskjerm bakgrunn med fixed bilde */
+    /* Fullskjerm bakgrunn */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: url("bg.jpg.JPG") no-repeat center center fixed;
-      background-size: cover;
       color: #ffffff;
       text-align: center;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
     }
 
-    /* Header, section og footer med kantfri blur */
-    header, section, footer {
-      background: rgba(255, 255, 255, 0.02); /* nesten usynlig hvit */
-      backdrop-filter: blur(12px); /* sterkere blur */
-      -webkit-backdrop-filter: blur(12px);
+    /* Blur overlay som dekker hele bakgrunnen */
+    .bg-blur {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("bg.jpg.JPG") no-repeat center center fixed;
+      background-size: cover;
+      filter: blur(12px); /* juster blurstyrken her */
+      z-index: -1; /* ligger bak alt innhold */
+    }
+
+    /* Innhold som er skarpt */
+    .content {
+      position: relative;
+      z-index: 1; /* ligger over blur */
       padding: 50px 20px;
+      max-width: 1000px;
       margin: 0 auto;
-      max-width: 1000px; /* kan justeres etter behov */
     }
 
     h1 {
@@ -75,7 +88,7 @@
       color: #000000;
     }
 
-    /* Responsivt for mobil */
+    /* Responsivt */
     @media (max-width: 600px) {
       h1 { font-size: 2em; }
       h2 { font-size: 1.5em; }
@@ -86,29 +99,35 @@
 </head>
 <body>
 
-<header>
-  <h1>Ymers Slaver</h1>
-  <p>Dette er den offisielle nettsiden til Ymers Slaver</p>
-  <a class="btn" href="https://discord.gg/6Qm7d9YYQu" target="_blank">Bli medlem</a>
-</header>
+<!-- Blur-bakgrunn -->
+<div class="bg-blur"></div>
 
-<section>
-  <h2>Hva som skjer på serveren vår</h2>
-  <ul>
-    <li>🎮 Gaming</li>
-    <li>💬 Chatting</li>
-    <li>🎉 Events</li>
-    <li>👥 Nye Folk</li>
-  </ul>
-  <div class="button-row">
-    <a class="btn" href="members.html">Medlemmer</a>
-    <a class="btn" href="rules.html">Se regler</a>
-  </div>
-</section>
+<!-- Innhold som ligger over blur -->
+<div class="content">
+  <header>
+    <h1>Ymers Slaver</h1>
+    <p>Dette er den offisielle nettsiden til Ymers Slaver</p>
+    <a class="btn" href="https://discord.gg/6Qm7d9YYQu" target="_blank">Bli medlem</a>
+  </header>
 
-<footer>
-  <p>© 2026 Ymers Slaver</p>
-</footer>
+  <section>
+    <h2>Hva som skjer på serveren vår</h2>
+    <ul>
+      <li>🎮 Gaming</li>
+      <li>💬 Chatting</li>
+      <li>🎉 Events</li>
+      <li>👥 Nye Folk</li>
+    </ul>
+    <div class="button-row">
+      <a class="btn" href="members.html">Medlemmer</a>
+      <a class="btn" href="rules.html">Se regler</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Ymers Slaver</p>
+  </footer>
+</div>
 
 </body>
 </html>
