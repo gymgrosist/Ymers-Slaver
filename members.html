@@ -2,32 +2,31 @@
 <html lang="no">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Medlemmer – YMERS SLAVER</title>
 <style>
   body {
     font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
+    background: #000000; /* helt svart */
+    color: #ffffff;      /* lys tekst */
     text-align: center;
     padding: 50px 20px;
   }
 
   h1 {
-    color: #5865F2;
     font-size: 2.5em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   h2 {
-    color: #ffffff;
     font-size: 1.2em;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   ul {
     list-style: none;
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -36,22 +35,36 @@
   }
 
   li {
-    background: #1f2937;
+    background: #0a0a0a; /* mørk boks på svart bakgrunn */
     padding: 10px 20px;
-    border-radius: 8px;
+    border-radius: 6px;
     min-width: 120px;
     text-align: center;
   }
 
   a.btn {
     display: inline-block;
-    margin-top: 30px;
-    padding: 12px 25px;
-    background: #ffffff;
-    color: #5865F2;
+    margin-top: 20px;
+    padding: 10px 20px; /* mindre og konsekvent med index.html */
+    background: none;
+    color: #ffffff;
+    border: 2px solid #ffffff; /* minimalistisk knapp */
     text-decoration: none;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 6px;
+    transition: 0.2s;
+  }
+
+  a.btn:hover {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 2em; }
+    h2 { font-size: 1em; }
+    li { min-width: 100px; padding: 8px 12px; }
+    a.btn { padding: 8px 16px; font-size: 1em; }
   }
 </style>
 </head>
