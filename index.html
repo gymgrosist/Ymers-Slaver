@@ -6,6 +6,7 @@
   <title>Ymers Slaver</title>
 
   <style>
+    /* Fullskjerm bakgrunn med fixed bilde */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -15,12 +16,16 @@
       text-align: center;
     }
 
- header, section, footer {
-  background: rgba(255, 255, 255, 0.02); /* nesten usynlig */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 50px 20px;
-}
+    /* Header, section og footer med kantfri blur */
+    header, section, footer {
+      background: rgba(255, 255, 255, 0.02); /* nesten usynlig hvit */
+      backdrop-filter: blur(12px); /* sterkere blur */
+      -webkit-backdrop-filter: blur(12px);
+      padding: 50px 20px;
+      margin: 0 auto;
+      max-width: 1000px; /* kan justeres etter behov */
+    }
+
     h1 {
       font-size: 3em;
       margin-bottom: 20px;
@@ -70,6 +75,7 @@
       color: #000000;
     }
 
+    /* Responsivt for mobil */
     @media (max-width: 600px) {
       h1 { font-size: 2em; }
       h2 { font-size: 1.5em; }
